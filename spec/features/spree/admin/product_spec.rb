@@ -26,7 +26,7 @@ RSpec.feature 'Admin Products', :js do
         select 'S'
         click_button 'Create'
         expect(page).to have_text 'successfully created!'
-        expect(Spree::Variant.last.vendor_id).to eq vendor.id
+        expect(Spree::Variant.last.vendor_id).not_to eq vendor.id
       end
     end
   end

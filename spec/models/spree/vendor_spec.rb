@@ -16,8 +16,8 @@ describe Spree::Vendor do
     it { is_expected.to validate_presence_of(:name) }
   end
 
-  describe 'initial state' do
-    it 'initial state should be pending' do
+  describe 'states' do
+    it 'should be pending at first' do
       should be_pending
     end
   end

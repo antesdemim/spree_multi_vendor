@@ -41,7 +41,7 @@ RSpec.feature 'Admin Option Types', :js do
 
         expect(page).to have_text 'successfully created!'
         expect(current_path).to eq spree.edit_admin_option_type_path(Spree::OptionType.last)
-        expect(Spree::OptionType.last.vendor_id).to eq vendor.id
+        expect(Spree::OptionType.last.vendor_id).not_to eq vendor.id
       end
     end
 

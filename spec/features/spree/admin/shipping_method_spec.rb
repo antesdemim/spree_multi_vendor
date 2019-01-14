@@ -41,7 +41,7 @@ RSpec.feature 'Admin Shipping Methods', :js do
 
         expect(page).to have_text 'successfully created!'
         expect(current_path).to eq spree.edit_admin_shipping_method_path(Spree::ShippingMethod.last)
-        expect(Spree::ShippingMethod.last.vendor_id).to eq vendor.id
+        expect(Spree::ShippingMethod.last.vendor_id).not_to eq vendor.id
       end
     end
 
